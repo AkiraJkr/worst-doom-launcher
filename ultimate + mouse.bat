@@ -9,6 +9,9 @@ setlocal EnableDelayedExpansion
 set "BASETITLE=Steam Doom Launcher by AkiraJkr and Mad"
 title %BASETITLE%
 
+echo This is made to be used in the "Ultimate Doom" folder, and with a "GZDoom" folder present inside of it.
+echo The Old Launcher requires the IWADs to be present in the "base" folder.
+
 ECHO Which launcher do you want to use?
 ECHO 1.GZDoom Launcher(Not Ready Yet)
 ECHO 2.Zandronum Launcher(Not Ready Yet)
@@ -23,7 +26,10 @@ IF ERRORLEVEL 2 GOTO zandronum
 IF ERRORLEVEL 1 GOTO gzdoom
 
 :gzdoom
-START @powershell.exe -ExecutionPolicy Unrestricted -File  "%~dp0\GZDoom_Launcher.ps1"
+rem START @powershell.exe -ExecutionPolicy Unrestricted -File  "%~dp0\GZDoom_Launcher.ps1"
+ECHO This is not even done yet, get out
+pause
+exit
 
 :Zandronum
 ECHO This is not even done yet, get out
